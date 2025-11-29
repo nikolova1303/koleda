@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: url('https://blog.rual-travel.com/wp-content/uploads/2019/10/legendata-za-dyado-koleda.jpg') center/cover no-repeat;
+    color: white;
+    overflow-x: hidden;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.55);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; 
+    left: 0;
+}
+
+header {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #000;
+}
+
+p {
+    font-size: 1.3rem;
+    text-shadow: 0 0 8px #000;
+}
+
+.buttons {
+    margin-top: 40px;
+}
+
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 28px;
+    font-size: 1.2rem;
+    background: rgba(255, 0, 0, 0.75);
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn:hover {
+    background: rgba(255, 0, 0, 1);
+    transform: scale(1.07);
+}
+
+footer {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #ffd;
+    text-shadow: 0 0 4px #000;
+}
+
+/* Падащ сняг */
+.snowflake {
+    position: fixed;
+    top: -10px;
+    pointer-events: none;
+    color: white;
+    font-size: 1em;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(110vh); }
+}
+/* ===== СТИЛОВЕ ЗА ВТОРАТА СТРАНИЦА ===== */
+
+.content {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.15);
+    color: black;
+}
+
+h2 {
+    color: #b22222;
+    margin-top: 25px;
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 30px;
+    background: #b22222;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.back:hover {
+    background: #8d1a1a;
+}
+/* 🎅 Дядо Коледа лети */
+.santa {
+    position: fixed;
+    top: 50px;
+    left: -200px;
+    width: 180px;
+    animation: santa-fly 12s linear infinite;
+    z-index: 9999;
+}
+
+@keyframes santa-fly {
+    0%   { left: -250px; top: 60px; }
+    50%  { left: 100vw; top: 120px; }
+    100% { left: -250px; top: 60px; }
+}

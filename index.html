@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коледен Дух – Начало</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="overlay"></div>
+
+    <header>
+        <h1>🎄 Коледен Дух</h1>
+        <p>Открий българските коледни традиции, обичаи и празнично вдъхновение!</p>
+
+        <!-- БРОЯЧ ДО КОЛЕДА -->
+        <div id="countdown" style="font-size: 2rem; margin-top: 20px; text-shadow: 0 0 8px #000;"></div>
+
+        <div class="buttons">
+            <a href="bgtradicii.html" class="btn">Български традиции</a>
+            <a href="koledaworld.html" class="btn">Коледа по света</a>
+            <a href="kolednirecepti.html" class="btn">Коледни рецепти</a>
+            <a href="pesni.html" class="btn">Песни и коледуване</a>
+            <a href="https://santatracker.google.com/intl/bg/" class="btn">Къде е Дядо Коледа?</a>
+        </div>
+    </header>
+
+    <footer>
+        © 2025 Коледен Дух – Всички права са запазени
+    </footer>
+
+    <!-- ПАДАЩ СНЯГ -->
+    <script>
+    function createSnowflake() {
+        const snowflake = document.createElement("div");
+        snowflake.classList.add("snowflake");
+        snowflake.textContent = "❄";
+
+        snowflake.style.left = Math.random() * 100 + "vw";
+        snowflake.style.fontSize = (Math.random() * 10 + 10) + "px";
+        snowflake.style.animationDuration = (Math.random() * 5 + 5) + "s";
+
+        document.body.appendChild(snowflake);
+
+        setTimeout(() => {
+            snowflake.remove();
+        }, 8000);
+    }
+
+    setInterval(createSnowflake, 200);
+    </script>
+
+    <!-- СКРИПТ ЗА БРОЯЧА -->
+    <script>
+    function updateCountdown() {
+        const now = new Date();
+        const christmas = new Date(now.getFullYear(), 11, 25);
+
+        if (now > christmas) {
+            christmas.setFullYear(christmas.getFullYear() + 1);
+        }
+
+        const diff = christmas - now;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        document.getElementById("countdown").innerText =
+            `До Коледа остават: ${days} дни, ${hours} часа, ${minutes} минути, ${seconds} секунди 🎅🎁`;
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+    </script>
+    <img src="C:\Users\monito\Downloads\diado-koleda-se-pribra-severniia-polyus-229-removebg-preview.png" class="santa">
+</body>
+</html>
