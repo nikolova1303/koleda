@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коледа по света</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+   <header>
+        <h1>Коледа по света</h1>
+        <p class="intro">Разгледай как празнуват Коледа различните държави и култури.</p>
+    </header>
+    <div class="content">
+        <section>
+            <h2>🎄 Германия</h2>
+            <p>Коледните пазари са символ на празника. Всяко градче има свой „Weihnachtsmarkt“ със светлини, лакомства и занаятчийски сувенири.</p>
+        </section>
+
+        <section>
+            <h2>🎅 Финландия</h2>
+            <p>Дядо Коледа живее в Лапландия. Туристите посещават неговия дом и се срещат с елфите.</p>
+        </section>
+
+        <section>
+            <h2>🎁 Испания</h2>
+            <p>Най-големият празник е на 6 януари – Тримата влъхви. Те раздават подаръци на децата.</p>
+        </section>
+
+        <section>
+            <h2>🍗 Япония</h2>
+            <p>Коледа не е национален празник, но традиция е семействата да ядат KFC и да украсяват дървета.</p>
+        </section>
+
+        <a href="index.html" class="back">⬅ Обратно към началната страница</a>
+    </div>
+          <script>
+        // Падащ сняг
+        function createSnowflake() {
+            const snowflake = document.createElement("div");
+            snowflake.classList.add("snowflake");
+            snowflake.textContent = "❄";
+
+            snowflake.style.left = Math.random() * 100 + "vw";
+            snowflake.style.fontSize = (Math.random() * 10 + 10) + "px";
+            snowflake.style.animationDuration = (Math.random() * 5 + 5) + "s";
+
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 8000);
+        }
+
+        setInterval(createSnowflake, 200);
+    </script>
+        <footer>
+        © 2025 Коледен Дух – Всички права са запазени
+    </footer>
+</body>
+</html>
